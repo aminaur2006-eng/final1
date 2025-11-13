@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar-section">
+  <nav class="navbar navbar-expand-lg navbar-light custom-nav">
+    <div class="container">
+      <h2 class="logo">Caffena<br>Coffee</h2>
+
+      <!-- Hamburger button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible menu -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About us</a></li>
+          <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <!-- menu section -->
+  <section class="menu-section container-fluid py-5">
+    <div class="row">
+      <aside class="col-md-3 col-sm-12 mb-4">
+        <h3 class="fw-bold">Menu</h3>
+
+        <!-- search bar -->
+        <input type="text" id="searchInput" class="form-control mt-3" placeholder="Search drinks...">
+
+        <div class="menu-list mt-3">
+          <button class="btn btn-outline-secondary w-100 mb-3" id="showAll">All options</button>
+          <ul class="list-group">
+            <li class="list-group-item">Latte</li>
+            <li class="list-group-item">Americano</li>
+            <li class="list-group-item">Espresso</li>
+            <li class="list-group-item">Mocha</li>
+            <li class="list-group-item">Cappuccino</li>
+            <li class="list-group-item">Macchiato</li>
+            <li class="list-group-item">Frappe</li>
+            <li class="list-group-item">Matcha</li>
+            <li class="list-group-item">Raf</li>
+          </ul>
+        </div>
+      </aside>
+
+      <div class="col-md-9 col-sm-12">
+        <div class="row g-4" id="menuItems">
+          <div class="col-4">
+            <div class="menu-item">
+              <img src="latte.jpg" alt="Latte">
+              <p>Latte</p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="menu-item">
+              <img src="americano.jpg" alt="Americano">
+              <p>Americano</p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="menu-item">
+              <img src="espresso.jpg" alt="Espresso">
+              <p>Espresso</p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="menu-item">
+              <img src="mocha.jpg" alt="Mocha">
+              <p>Mocha</p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="menu-item">
+              <img src="cappuccino.jpg" alt="Cappuccino">
+              <p>Cappuccino</p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="menu-item">
+              <img src="macchiato.jpg" alt="Macchiato">
+              <p>Macchiato</p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="menu-item">
+              <img src="frappe.jpg" alt="Frappe">
+              <p>Frappe</p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="menu-item">
+              <img src="matcha.jpg" alt="Matcha">
+              <p>Matcha</p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="menu-item">
+              <img src="raf.jpg" alt="Raf">
+              <p>Raf</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Order Modal -->
+<div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="orderModalLabel">Order your drink!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="orderForm">
+          <div class="mb-3">
+            <label for="name" class="form-label">Your name</label>
+            <input type="text" class="form-control" id="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="drink" class="form-label">Drink</label>
+            <input type="text" class="form-control" id="drink" readonly>
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="tel" class="form-control" id="phone" required>
+          </div>
+          <button type="submit" class="btn btn-confirm w-100">Confirm Order</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- Footer -->
+  <footer class="footer-section">
+  <div class="footer">
+    <div class="footer-column">
+      <h6>About</h6>
+      <p>Welcome to Caffena Coffee — a cozy place where every cup tells a story. 
+         Come for the aroma, stay for the atmosphere.</p>
+    </div>
+
+    <div class="footer-column">
+      <h6>Contact Us</h6>
+      <p><strong>Email:</strong> hello@caffena.com</p>
+      <p><strong>Phone:</strong> +7 (777) 200 9842</p>
+      <p><strong>Address:</strong> Kabanbay Batyr 62, Kazakhstan, Astana</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Caffena Coffee. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
